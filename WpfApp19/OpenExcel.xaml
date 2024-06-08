@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp19.OpenExcel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19"
+        mc:Ignorable="d"
+        Title="OpenExcel" Height="450" Width="800" Background="#FFC5E6FF">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock Text="Название столбца:" Margin="0,0,0,5"/>
+                <TextBox x:Name="NameColumn" Width="610" FontSize="16" Height="29"/>
+            </StackPanel>
+            <Button x:Name="AddColumn" Grid.Column="1" Content="Добавить столбец" FontSize="16" Margin="10,0,0,0" VerticalAlignment="Center" Click="AddColumn_Click" Background="#FF92A1F3"/>
+        </Grid>
+
+        <DataGrid x:Name="grid" Grid.Row="1" Margin="0,0,0,10" CanUserSortColumns="True" CanUserReorderColumns="True" IsReadOnly="False"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="SaveBtm" Content="Сохранить файл" FontSize="16" Click="SaveBtm_Click" Background="#FF92A1F3"/>
+            <Button x:Name="SendBtm" Content="Отправить файл по почте" FontSize="16" Grid.Column="1" Margin="10,0,0,0" Click="SendBtm_Click" Background="#FF92A1F3"/>
+        </Grid>
+    </Grid>
+</Window>

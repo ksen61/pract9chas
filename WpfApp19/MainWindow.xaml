@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid Background="#FFACBFED">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добро пожаловать в почтовый редактор текста!!!" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"/>
+        <Button x:Name="CreateWord" Content="Создать Word документ" Grid.Row="1" Margin="16,12,16,12" Background="#FF496CC1"/>
+        <Button x:Name="OpenWord" Content="Открыть Word документ" Grid.Row="2" Margin="16,12,16,12" Background="#FF496CC1"/>
+        <Button x:Name="CreateExelBtm" Content="Создать Exel документ" Grid.Row="3" Margin="16,12,16,12" Background="#FF496CC1" Click="CreateExcel_Click"/>
+        <Button x:Name="OpenExelBtm" Content="Открыть Exel документ" Grid.Row="4" Margin="16,12,16,12" Background="#FF496CC1" Click="OpenExcel_Click"/>
+    </Grid>
+</Window>
